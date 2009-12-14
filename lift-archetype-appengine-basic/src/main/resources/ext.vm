@@ -1,0 +1,6 @@
+## this file contains a set of velocity macro interpreted when artifact will be create by this archetype
+## in this file, values ${xxx} are replaced at the archetype build time by values defined in the archetype's pom.xml (the file is filtered)
+## this file is used as an exchange area between the maven's filtering (build time) and velocity engine (runtime)
+#set( $scala_version = '${scala.version}')
+#set( $lift_version = '${lift.version}')
+#set( $appengine_version = '${appengine.version}')

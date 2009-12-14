@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>lift</artifactId>
+    <groupId>net.liftweb</groupId>
+    <version>1.1-SNAPSHOT</version>
+  </parent>
+  <properties>
+    <appengine-version>1.2.8</appengine-version>
+  </properties>
+  <groupId>net.liftweb</groupId>
+  <artifactId>lift-appengine</artifactId>
+  <name>Lift Google App Engine</name>
+  <description>Lift API for using Google App Engine as a datastore and for user authentication</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>net.liftweb</groupId>
+      <artifactId>lift-webkit</artifactId>
+      <version>${parent.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>com.google.appengine</groupId>
+    	<artifactId>appengine-api-1.0-sdk</artifactId>
+    	<version>${appengine-version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>junit</groupId>
+    	<artifactId>junit</artifactId>
+    	<version>4.6</version>
+    	<scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.scalatest</groupId>
+    	<artifactId>scalatest</artifactId>
+    	<version>1.0</version>
+    	<scope>test</scope>
+    </dependency>
+    <!-- For unit tests that access the in-memory datastore -->
+    <dependency>
+    	<groupId>net.liftweb</groupId>
+    	<artifactId>lift-appengine-test</artifactId>
+        <version>${parent.version}</version>
+    	<scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <configuration>
+           <downloadSources>true</downloadSources>
+           <buildcommands>
+               <buildcommand>ch.epfl.lamp.sdt.core.scalabuilder</buildcommand>
+           </buildcommands>
+           <additionalProjectnatures>
+               <projectnature>ch.epfl.lamp.sdt.core.scalanature</projectnature>
+           </additionalProjectnatures>
+           <classpathContainers>
+               <classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
+               <classpathContainer>ch.epfl.lamp.sdt.launching.SCALA_CONTAINER</classpathContainer>
+         </classpathContainers>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

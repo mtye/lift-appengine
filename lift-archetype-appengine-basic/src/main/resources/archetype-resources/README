@@ -1,0 +1,16 @@
+IMPORTANT NOTICE:
+
+In order to upload this application to the Google App Engine, you will first
+have to edit the src/main/webapp/WEB-INF/appengine-web.xml configuration
+file and change the value <application></application> element to the
+application ID you registered with the App Engine Admin Console. For more
+information, see:
+
+http://code.google.com/appengine/docs/java/config/appconfig.html
+
+
+Also, the standard Maven configuration has been altered to build the
+exploded webapp in the "<project>/war" directory, instead of the default
+"<project>/target/${artifactId}-${version}" directory. The Google Plugin
+for Eclipse requires the exploded webapp to be located in the "war" directory
+in order to to run and and debug your application with the built-in server.

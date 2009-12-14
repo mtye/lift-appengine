@@ -1,0 +1,17 @@
+<lifecycles>
+  <liftcycle>
+    <id>appengine</id>
+    <phases>
+     <phase>
+      <id>unpack-sdk</id>
+      <executions>
+        <execution>
+          <goals>
+            <goal>unpack</goal>
+          </goals>
+        </execution>
+      </executions>
+     </phase>
+    </phases>
+  </liftcycle>
+</lifecycles>

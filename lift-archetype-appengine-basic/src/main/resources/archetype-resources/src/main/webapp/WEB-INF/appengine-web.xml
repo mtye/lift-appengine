@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+
+  <!-- To upload and run this application in the Google App Engine, you must
+  change the text within the <application></application> element below to the
+  Google application ID you registered when you created your application in
+  the App Engine Admin Console. For more information, see
+  http://code.google.com/appengine/docs/java/config/appconfig.html  -->
+  
+  <application>$artifactId</application>
+
+  <version>1</version>
+  <system-properties>
+    <property name="in.gae.j" value="true" />
+  </system-properties>
+  <sessions-enabled>true</sessions-enabled>
+  <static-files>
+    <include path="/images/**" />
+  </static-files>
+</appengine-web-app>

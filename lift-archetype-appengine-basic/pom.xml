@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>net.liftweb</groupId>
+    <artifactId>lift</artifactId>
+    <version>1.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>lift-archetype-appengine-basic</artifactId>
+  <packaging>jar</packaging>
+  <name>${project.artifactId}</name>
+  <description>Archetype - basic Google App Engine project for Lift</description>
+  <properties>
+    <lift.version>${project.parent.version}</lift.version>
+    <appengine.version>1.2.8</appengine.version>
+    <maven.test.skip>true</maven.test.skip>
+  </properties>
+  <build>
+    <resources> <!-- Include everything in the resources, but apply filtering only to ext.vm -->
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>ext.vm</include>
+        </includes>
+        <filtering>true</filtering>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <excludes>
+          <exclude>ext.vm</exclude>
+        </excludes>
+        <filtering>false</filtering>
+      </resource>
+    </resources>
+  </build>
+</project>

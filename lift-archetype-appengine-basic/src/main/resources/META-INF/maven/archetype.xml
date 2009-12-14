@@ -1,0 +1,24 @@
+<archetype>
+  <id>lift-archetype-appengine-basic</id>
+  <sources>
+    <source>src/main/scala/model/.this-file-is-safe-to-delete</source>
+    <source>src/main/scala/snippet/HelloWorld.scala</source>
+    <source>src/main/scala/view/.this-file-is-safe-to-delete</source>
+  </sources>
+  <resources>
+    <resource>README</resource>
+    <resource>src/main/scala/bootstrap/liftweb/Boot.scala</resource>
+    <resource>src/main/webapp/images/ajax-loader.gif</resource>
+    <resource>src/main/webapp/templates-hidden/default.html</resource>
+    <resource>src/main/webapp/WEB-INF/appengine-web.xml</resource>
+    <resource>src/main/webapp/WEB-INF/web.xml</resource>
+    <resource>src/main/webapp/index.html</resource>
+  </resources>
+  <testSources>
+    <source>src/test/scala/AppTest.scala</source>
+  </testSources>
+  <testResources>
+    <resource>src/test/scala/LiftConsole.scala</resource>
+    <resource>src/test/scala/RunAppEngine.scala</resource>
+  </testResources>
+</archetype>
